@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Brain Stroke
+</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Roboto:300,400,700" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+<link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card w3-left-align w3-large">
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#predictor">Machine Learning</a></li>
+        <li><a href="#data">Data Visualizations</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="home" style="padding: 390px; background-image: url(../static/images/background_brain.png); background-size: 100% 100%;">
+  <h1 style="font-size: 100px" align="right">At Risk for a Brain Stroke?</h1>
+</header>
+
+<!-- First Grid -->
+<section id="about" class="fragment fragment-one">
+    <div class="container">
+    <h2 style="color: #f8d6d6"> About </h2>
+
+        <div class="row">
+            <div class="col-md-7">
+
+                <!-- Edit this text with a brief intoduction / brand statement etc. -->
+                <h5 style="color: #ffff">
+                  Welcome to our brain stroke predictor.  Did you know that strokes are the 2nd leading cause of death globally according to the World Health Organization(WHO), responsible for approximately 11% of total deaths. Based on the following factors: Gender, Age, Hypertension, Heart Disease Status, Marital Status, Work Type, Residence, Avg Glucose Level, BMI, Smoking Status, and Stroke Status can we predict whether or not an individual is more at risk for having a stroke.
+                </h5>
+            </div>
+            <div align="right" class="col-md-5">
+                <img src="../static/images/brain_about.png" alt="Brain" style="height:350px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Second Grid -->
+<section id="predictor" class="fragment fragment-two">
+<div class="container">
+      <div class="row">
+  
+        <div class="col-md-3">
+      <ul class="selector">
+        <form method="POST">
+        <li>
+          <label for="age">Age:</label><br>
+          <input type="text" id="age" name="age" placeholder="In years" style="width:200px"><p></p>
+        </li><br>
+        <li>
+          <label for="height">Height:</label><br>
+          <input type="range" min="48" max="84" value="66" class="slider" id="height" name="height" style="width:200px">
+          <p style="color: #ffff"><span id="demo"></span></p>
+        </li>
+        <li>
+            <label for="weight">Weight:</label><br>
+            <input type="text" id="weight" name="weight" placeholder="In pounds" style="width:200px"><p></p>
+        </li><br>
+        <li>
+          <label for="sex">Sex at Birth:</label><br>
+          <select id="sex" name="sex" style="width:200px"><br>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+          </select><p></p>
+        </li>
+        <li>
+            <label for="married">Ever Been Married:</label><br>
+            <select id="married" name="married" style="width:200px">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select><p></p>
+        </li>
+        <li>
+            <label for="work">Work Type:</label><br>
+            <select id="work" name="work" style="width:200px">
+              <option value="1">Private</option>
+              <option value="2">Self Employed</option>
+              <option value="3">Government</option>
+              <option value="4">Children</option>
+            </select><p></p>
+        </li>
+        <li>
+            <label for="res">Residence Type:</label><br>
+            <select id="res" name="res" style="width:200px">
+              <option value="0">Rural</option>
+              <option value="1">Urban</option>
+            </select><p></p>
+        </li><br>
+        <li>
+            <label for="smoke">Smoking Status:</label><br>
+            <select id="smoke" name="smoke" style="width:200px">
+              <option value="1">Formerly Smoked</option>
+              <option value="2">Never Smoked</option>
+              <option value="3">Currently Smokes</option>
+            </select><p></p>
+        </li><br>
+        <li>
+            <label for="hyper">Hypertension:</label><br>
+            <select id="hyper" name="hyper" style="width:200px">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select><p></p>
+        </li><br>
+        <li>
+            <label for="heart">Heart Disease:</label><br>
+            <select id="heart" name="heart" style="width:200px">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select><p></p>
+        </li><br>
+        <li>
+            <label for="agl">Average Glucose Level:</label><br>
+            <input type="text" id="agl" name="agl" placeholder="In mg/dL" style="width:200px"><p></p>
+        </li><br>
+        <button type="submit" value="submit" class="btn btn-light text-primary btn-block" style="margin : 20px 20px -10px 0px">Submit</button>
+      </form>
+      </ul>
+    </div>
+    <div align="right" class="col-md-9">
+        <h2 style="color: #f8d6d6">Machine Learning</h2><br>
+            <!-- Edit this text with a brief intoduction / brand statement etc. -->
+            <h5 style="color: #ffff">
+              X-Variables = Gender, Age, Hypertension, Heart Disease, Ever Married, Residence Type, Avg. Glucose Level, BMI, Work Type, Smoking Status
+              Y-Variable = Stroke
+               
+              Data was resampled so number of stroke occurrences = number of non-stroke occurrences. Then the data was then split and trained.
+               
+              Using a Random Forest Classifier as our machine learning model the data was then fitted for the model in order to predict stroke outcomes.              
+            </h5><br><br>
+        <ul class="predict">
+            <h5 style="color: #ffff">
+                {{test}}
+            </h5>
+        </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Third Grid -->
+<section id="data" class="fragment fragment-three">
+    <div class="container">
+    <h2 style="color: #f8d6d6"> Data visualizations </h2>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Edit this text with a brief intoduction / brand statement etc. -->
+                <h5 style="color: #ffff">
+                  Our Tableau dashboards providing further insight on our findings.
+                </h5>
+                <div class='tableauPlaceholder' id='viz1661743301076' style='position: relative'><noscript><a href='http:&#47;&#47;127.0.0.1:5000&#47;'><img alt='Stroke Data Summary ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UO&#47;UOBootCampFinalProjectBrainStroke&#47;StrokeDataSummary&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;UOBootCampFinalProjectBrainStroke&#47;StrokeDataSummary?:language=en-US&amp;:embed=y&amp;:toolbar=yes&amp;:embed_code_version=3&amp;:loadOrderID=0&amp;:display_count=yes&amp;:tabs=no' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UO&#47;UOBootCampFinalProjectBrainStroke&#47;StrokeDataSummary&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='tabs' value='no' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1661743301076');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+<!-- Fourth Grid -->
+<section id="conclusion" class="fragment fragment-four">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-9">
+                <h2 style="color: #f8d6d6"> Conclusion </h2>
+                <h5 style="color: #ffff">
+                  Using the Random Forest Classifier we were able to produce a model with a 99% accuracy.  Based on the data, there is a strong correlation with increasing age, people are more at risk for having a stroke.  Females are slightly more at risk than males with a 57.42% vs 42.58% respectively.  We found that people with higher BMI were more at risk for having stroke, but heart disease did not have a significant impact.
+                </h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+    <section class="fragment fragment-five">
+        <div class="container">
+            <div class="row">
+                <div align="center" class="col-md-4">
+                    <h5 style="color: #f8d6d6">Tyler Midcalf</h5>
+
+                    <!--update these links to match your own social media profiles -->
+                    <a href="https://linkedin.com/in" class="social-icon"><i class="fab fa-linkedin" style='color: #ffff'></i></a>
+                    <a href="jttps://github.com/" class="social-icon"><i class="fab fa-github" style='color: #ffff'></i></a>
+                </div>
+                <div align="center" class="col-md-4">
+                    <h5 style="color: #f8d6d6">Aimee Lewis</h5>
+
+                    <!--update these links to match your own social media profiles -->
+                    <a href="https://linkedin.com/in" class="social-icon"><i class="fab fa-linkedin" style='color: #ffffff'></i></a>
+                    <a href="jttps://github.com/" class="social-icon"><i class="fab fa-github" style='color: #ffffff'></i></a>
+                </div>
+                <div align="center" class="col-md-4">
+                    <h5 style="color: #f8d6d6">Derick Rosenquist</h5>
+
+                    <!--update these links to match your own social media profiles -->
+                    <a href="https://linkedin.com/in" class="social-icon"><i class="fab fa-linkedin" style='color: #ffffff'></i></a>
+                    <a href="jttps://github.com/" class="social-icon"><i class="fab fa-github" style='color: #ffffff'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script>
+    var slider = document.getElementById("height");
+    var output = document.getElementById("demo");
+    output.innerHTML = (`${Math.floor((slider.value)/12)} Feet ${(slider.value) % 12} Inches`);
+    
+    
+
+    slider.oninput = function() {
+      output.innerHTML = (`${Math.floor((this.value)/12)} Feet ${(this.value) % 12} Inches`);
+    }
+</script>
+    
+
+</body>
+</html>

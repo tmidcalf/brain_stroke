@@ -1,0 +1,121 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #24292f;
+  }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #ffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #f1acac;
+    color: #24292f
+}
+
+h1 {
+    color: #f1acac;
+    -webkit-text-fill-color: #f1acac; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #24292f;
+  }
+
+
+.fragment-one {
+    background-color: #24292F
+}
+
+.fragment-two {
+    background-color: #243540
+}
+
+.fragment-three {
+    background-color: #244150
+}
+
+.fragment-four{
+    background-color: #243540;
+}
+
+.fragment-five{
+    background-color: #24292F;
+}
+
+
+label {
+    color: #ffff;
+}
+
+body,h2,h3,h4,h5,h6 {
+    font-family: "Lato", sans-serif
+}
+
+.w3-bar,h1,button {
+    font-family: "Montserrat", sans-serif
+}
+
+.fa-anchor,.fa-coffee {
+    font-size:200px
+}
+
+div.container {
+    padding: 70px;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+  
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #ffff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider:hover {
+    opacity: 1;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #f1acac;
+    cursor: pointer;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+ul.selector {
+    width: 250px;
+    padding: 25px;
+  }
+
+ul.predict {
+    width: 250px;
+    padding: 25px;
+}
