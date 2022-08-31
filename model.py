@@ -2,7 +2,7 @@ import numpy as np
 import pickle
 
 def mlearn(age, height, weight, sex, married, work, res, smoke, hyper, heart, agl):
-    loaded_model = pickle.load(open("flask/finalized_model.sav", 'rb'))
+    loaded_model = pickle.load(open("finalized_model.sav", 'rb'))
     data = []
 
     age=float(age)
