@@ -37,10 +37,10 @@ def mlearn(age, height, weight, sex, married, work, res, smoke, hyper, heart, ag
     else:
         return "With the information provided you ARE prone to brain stroke"
 
-loaded_model = pickle.load(open("flask/finalized_model.sav", 'rb'))
+loaded_model = pickle.load(open("finalized_model.sav", 'rb'))
 
 new_data = np.array([[0, 0, 162.23, 27.3, 0, 56, 1, 0, 0, 0]])
 
-results = loaded_model.predict(new_data)
+results = loaded_model.predict(new_data)[0]
 
 print(results)
